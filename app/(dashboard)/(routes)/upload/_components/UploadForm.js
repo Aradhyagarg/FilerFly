@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import AlertMsg from './AlertMsg';
+import FilePreview from './FilePreview';
 
 function UploadForm() {
     const [file, setFile] = useState();
@@ -33,6 +34,7 @@ function UploadForm() {
                 </label>
             </div>
             {error ? <AlertMsg msg={error}/> : null}
+            {file ? <FilePreview file={file} removeFile={() => setFile(null)}/> : null}
             <button disabled={!file} className="p-2 bg-primary text-white w-[30%] rounded-full mt-5 disabled:bg-gray-500">Upload</button>
         </div>
     );
