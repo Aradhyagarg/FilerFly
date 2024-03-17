@@ -44,3 +44,5 @@ function UploadForm({ UploadButtonClick, progress }) {
 }
 
 export default UploadForm;
+
+/*{progress>0 ? <ProgressBar progress={progress}/> : <button disabled={!file} className="p-2 bg-primary text-white w-[30%] rounded-full mt-5 disabled:bg-gray-500" onClick={() => { UploadButtonClick(file) }}>Upload</button>}*/
